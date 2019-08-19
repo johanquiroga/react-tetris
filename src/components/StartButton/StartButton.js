@@ -9,7 +9,11 @@ function StartButton({ callback }) {
 }
 
 StartButton.propTypes = {
-  callback: PropTypes.func.isRequired,
+  callback: PropTypes.func,
+};
+
+StartButton.defaultProps = {
+  callback: () => {},
 };
 
 export default StartButton;

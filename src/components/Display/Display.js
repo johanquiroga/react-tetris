@@ -9,8 +9,12 @@ function Display({ gameOver, text }) {
 }
 
 Display.propTypes = {
-  gameOver: PropTypes.bool.isRequired,
+  gameOver: PropTypes.bool,
   text: PropTypes.string.isRequired,
+};
+
+Display.defaultProps = {
+  gameOver: false,
 };
 
 export default Display;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import Cell from '../Cell';
+import { Cell } from '../index';
 
 // Styled
 import { StyledStage } from './StyledStage';
@@ -11,10 +11,7 @@ function Stage({ stage }) {
   return (
     <StyledStage width={stage[0].length} height={stage.length}>
       {stage.map((row, i) =>
-        row.map(
-          (cell, j) =>
-            console.log(cell) || <Cell key={`${i}.${j}`} type={cell[0]} />
-        )
+        row.map((cell, j) => <Cell key={`${i}.${j}`} type={cell[0]} />)
       )}
     </StyledStage>
   );
